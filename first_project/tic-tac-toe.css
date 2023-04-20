@@ -1,0 +1,25 @@
+* {
+    border:1px black;
+}
+body {
+    display:grid;
+    grid-template-columns: 300px 300px 300px;
+    grid-template-rows: 300px 300px 300px;
+}
+main {
+    
+    grid-column: 2;
+    grid-row: 2;
+    display : grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+}
+section {
+    border: 1px solid black;
+}
+header {
+    align-items: center;
+}
+.red {
+    background-color: red;
+}
