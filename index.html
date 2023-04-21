@@ -35,9 +35,11 @@
         var box8 = document.querySelector('#c2')
         var box9 = document.querySelector('#c3')
         boxes.addEventListener('click',function(event) {
-            let listitem = event.target
-           
-            listitem.classList.add('red')
+            var listitem = event.target
+            var displayX = 'X'
+            var display0 = '0'
+            
+            listitem.textContent = displayX
         })
         
     </script>
