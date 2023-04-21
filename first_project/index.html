@@ -24,7 +24,7 @@
     </main>
     <footer></footer>
     <script>
-        var boxes = document.querySelectorAll('.boxes')
+        var boxes = document.querySelector('.boxes')
         var box1 = document.querySelector('#a1')
         var box2 = document.querySelector('#a2')
         var box3 = document.querySelector('#a3')
@@ -34,6 +34,11 @@
         var box7 = document.querySelector('#c1')
         var box8 = document.querySelector('#c2')
         var box9 = document.querySelector('#c3')
+        boxes.addEventListener('click',function(event) {
+            let listitem = event.target
+            console.log(listitem)
+            listitem.classList.add('red')
+        })
         
     </script>
 </body>
