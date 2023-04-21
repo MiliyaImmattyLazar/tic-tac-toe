@@ -34,14 +34,19 @@
         var box7 = document.querySelector('#c1')
         var box8 = document.querySelector('#c2')
         var box9 = document.querySelector('#c3')
+        var clickNumber = 1
         boxes.addEventListener('click',function(event) {
-            var listitem = event.target
             var displayX = 'X'
             var display0 = '0'
-            
-            listitem.textContent = displayX
+            clickNumber = clickNumber+1
+            var listitem = event.target
+                if(clickNumber % 2 === 0) {
+                    listitem.textContent = displayX
+                }
+                else {
+                    listitem.textContent = display0
+                } 
         })
-        
     </script>
 </body>
 </html>
