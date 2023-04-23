@@ -1,32 +1,25 @@
 # tic-tac-toe
-# Project Name
-The briefest description of my cool project and why you should all use it.
+# TIC-TAC-TOE
+
 
 ## :computer: Click here to see my live project
+https://miliyaimmattylazar.github.io/tic-tac-toe/
+
 ### :page_facing_up: About
-- How to use my-awesome-project.
-- download instructions(if relevant):
-```
-$ git clone my-awaseome-app
-`$ cd my-awesome-app
-`$node app.js
-```
-- Add in app screenshots.
+- How to play my game.
+- Tic-tac-toe is a 2 player game.
+- There are 9 boxes to fill up. If a player fill up one horizontel,diagonal or vertical row, that user will win the game.
 
 ## :pencil2:Planning & Problem Solving
-- Talk about approach to the problem.
-- Add screenshots/drawings of doodles/plans during the planning phase.
-- Flow charts of app logic
-![alt text](https://images.unsplash.com/photo-1581291518633-83b4ebd1d83e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80)
+
 ## :rocket:Cool tech
 -Programming languages
--Libraries
--Animations
-Anything else you'd be proud to show your parants.
+JavaScript
+CSS
+HTML
+
 ## :scream:Bugs to fix :poop:
--Anything a little broken
--Anythina a LOT broken
--Buttons to not click too many tome(because it is broken)
+
 ## :sob: Lessons learnt
 What would i do differantly if I could wind back the clock...
 ## :white_check_mark:Future features

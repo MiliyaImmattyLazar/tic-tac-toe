@@ -9,22 +9,30 @@
 </head>
 <body>
     <header>
-        <h1>TIC TAC TOE</h1>    
+        <h1>TIC TAC TOE</h1>   
+        <input id="player" type="text"> 
     </header>
-    <main class="boxes">
-        <section id="a1"></section>
-        <section id="a2"></section>
-        <section id="a3"></section>
-        <section id="b1"></section>
-        <section id="b2"></section>
-        <section id="b3"></section>
-        <section id="c1"></section>
-        <section id="c2"></section>
-        <section id="c3"></section>
+    <footer>
+       
+    </footer>
+    <main class="boxee" id="boxid">
+        
+        <section class="boxes" id="a1"></section>
+        <section class="boxes" id="a2"></section>
+        <section class="boxes" id="a3"></section>
+        <section class="boxes" id="b1"></section>
+        <section class="boxes" id="b2"></section>
+        <section class="boxes" id="b3"></section>
+        <section class="boxes" id="c1"></section>
+        <section class="boxes" id="c2"></section>
+        <section class="boxes" id="c3"></section>
     </main>
-    <footer></footer>
+    
     <script>
-        var boxes = document.querySelector('.boxes')
+        var boxes =document.querySelectorAll('.boxes')
+        var boxid = document.getElementById('boxid')
+        var player =document.querySelector('#player')
+        var boxee = document.querySelector('.boxee')
         var box1 = document.querySelector('#a1')
         var box2 = document.querySelector('#a2')
         var box3 = document.querySelector('#a3')
@@ -35,19 +43,48 @@
         var box8 = document.querySelector('#c2')
         var box9 = document.querySelector('#c3')
         var clickNumber = 1
-        boxes.addEventListener('click',function(event) {
-            var displayX = 'X'
-            var display0 = '0'
+        var displayX = 'X'
+        var display0 = '0'
+        player.value ="Let's start the game"
+        boxee.addEventListener('click',function(event) {
             clickNumber = clickNumber+1
-            var listitem = event.target
-                if(clickNumber % 2 === 0) {
-                    listitem.textContent = displayX
-                }
-                else {
-                    listitem.textContent = display0
+            var boxValue = event.target
+            if(clickNumber % 2 === 0) {
+                    boxValue.textContent = displayX
+                    player.value='player2 s turn'
+                    winner()
+                    
                 } 
+                else if (clickNumber % 2 ===1){
+                    boxValue.textContent = display0
+                    player.value='player1 s turn'
+                    winner()
+
+                }    
+                
         })
+    
+        function winner() {
+           if(box1&box2&box3 ===displayX || box4&box5&box6===displayX|| box7&box8&box9===displayX || box1&box4&box7 === displayX|| box2&box5&box8 === displayX || box3&box3&box6&box9 === displayX || box1&box5&box9 === displayX || box3&box5&box7 === displayX ) {
+
+            player.value ='player 1 won'
+           }
+           else if(box1&box2&box3 ===display0 || box4&box5&box6===display0|| box7&box8&box9===display0 || box1&box4&box7 === display0|| box2&box5&box8 === display0 || box3&box3&box6&box9 === display0 || box1&box5&box9 === display0 || box3&box5&box7 === display0 ) {
+            
+            player.value ='player 2 won'
+
+           }
+            
+                             
+        }
+        
+           
+    
+                    
+                   
+        
         
     </script>
 </body>
+
 </html>

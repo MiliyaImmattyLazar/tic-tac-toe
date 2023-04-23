@@ -1,3 +1,4 @@
+
 * {
     border:1px black;
 }
@@ -6,6 +7,7 @@ body {
     grid-template-columns: 300px 300px 300px;
     grid-template-rows: 300px 300px 300px;
 }
+
 main {
     
     grid-column: 2;
@@ -16,10 +18,21 @@ main {
 }
 section {
     border: 1px solid black;
+    font-size: 40px;
+    padding-left: 30px;
+    padding-top: 30px;
+    background-color: yellow;
+    
 }
 header {
     align-items: center;
+
 }
 .red {
     background-color: red;
+}
+header input {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 30px;
+
 }
