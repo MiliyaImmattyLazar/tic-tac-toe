@@ -6,16 +6,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="./tic-tac-toe.css">
+   
 </head>
 <body>
     <header>
         <h1>TIC TAC TOE</h1>   
+        <h2 class="winnerdisplay"></h2>
         <input id="player" type="text"> 
     </header>
     <footer>
        
     </footer>
-    <main class="boxee" id="boxid">
+    <main class="container" id="boxid">
         
         <section class="boxes" id="a1"></section>
         <section class="boxes" id="a2"></section>
@@ -27,64 +29,82 @@
         <section class="boxes" id="c2"></section>
         <section class="boxes" id="c3"></section>
     </main>
+<script>
+    var boxes =document.querySelectorAll('.boxes')
+    var boxid = document.querySelector('boxid')
+    var player =document.querySelector('#player')
+    var container = document.querySelector('.container')
+    var display = document.querySelector('.winnerdisplay')
+
     
-    <script>
-        var boxes =document.querySelectorAll('.boxes')
-        var boxid = document.getElementById('boxid')
-        var player =document.querySelector('#player')
-        var boxee = document.querySelector('.boxee')
-        var box1 = document.querySelector('#a1')
-        var box2 = document.querySelector('#a2')
-        var box3 = document.querySelector('#a3')
-        var box4 = document.querySelector('#b1')
-        var box5 = document.querySelector('#b2')
-        var box6 = document.querySelector('#b3')
-        var box7 = document.querySelector('#c1')
-        var box8 = document.querySelector('#c2')
-        var box9 = document.querySelector('#c3')
-        var clickNumber = 1
-        var displayX = 'X'
-        var display0 = '0'
-        player.value ="Let's start the game"
-        boxee.addEventListener('click',function(event) {
-            clickNumber = clickNumber+1
-            var boxValue = event.target
-            if(clickNumber % 2 === 0) {
-                    boxValue.textContent = displayX
-                    player.value='player2 s turn'
-                    winner()
-                    
-                } 
-                else if (clickNumber % 2 ===1){
-                    boxValue.textContent = display0
-                    player.value='player1 s turn'
-                    winner()
+   
+    var clickNumber = 1
+    var displayX = 'X'
+    var display0 = '0'
+    display.innerText ="Let's start the game"
+    container.addEventListener('click',function(event) {
+        
+    clickNumber = clickNumber+1
+    var boxValue = event.target
+    if(boxValue.innerText !== '') {
+        return
+    }
+    if(clickNumber % 2 === 0) {
+        boxValue.value= displayX
+        boxValue.textContent = displayX
+        player.value="Player2's turn"
+        
+        } 
+        else if (clickNumber % 2 ===1){
+            boxValue.value=display0
+            boxValue.textContent = display0
+           player.value="Player1's turn"
+        }  
+    winner()
+             
+})   
+function winner()
+{
+    var box1 = document.querySelector('#a1').innerText
+    var box2 = document.querySelector('#a2').innerText
+    var box3 = document.querySelector('#a3').innerText
+    var box4 = document.querySelector('#b1').innerText
+    var box5 = document.querySelector('#b2').innerText
+    var box6 = document.querySelector('#b3').innerText
+    var box7 = document.querySelector('#c1').innerText
+    var box8 = document.querySelector('#c2').innerText
+    var box9 = document.querySelector('#c3').innerText
 
-                }    
-                
-        })
-    
-        function winner() {
-           if(box1&box2&box3 ===displayX || box4&box5&box6===displayX|| box7&box8&box9===displayX || box1&box4&box7 === displayX|| box2&box5&box8 === displayX || box3&box3&box6&box9 === displayX || box1&box5&box9 === displayX || box3&box5&box7 === displayX ) {
-
-            player.value ='player 1 won'
-           }
-           else if(box1&box2&box3 ===display0 || box4&box5&box6===display0|| box7&box8&box9===display0 || box1&box4&box7 === display0|| box2&box5&box8 === display0 || box3&box3&box6&box9 === display0 || box1&box5&box9 === display0 || box3&box5&box7 === display0 ) {
-            
-            player.value ='player 2 won'
-
-           }
-            
-                             
+    if((box1 === 'X'&& box2 ==='X' && box3==='X')|| (box4 ==='X' &&box5==='X' &&box6 ==='X')|| (box7 ==='X' && box8 ==='X' && box9==='X') || (box1 ==='X' && box4 ==='X' && box7==='X')|| (box2==='X' && box5 ==='X' && box8 ==='X') || (box3 ==='X'&& box6 ==='X'&& box9==='X' ) ||( box1==='X' && box5==='X' && box9==='X') || (box3 ==='X'&& box5==='X' && box7==='X')) {
+        display.innerText ='player 1 won'
+        gameover()
+        
         }
+        else if((box1 === '0'&& box2 ==='0' && box3==='0')|| (box4 ==='0' &&box5==='0' &&box6 ==='0')|| (box7 ==='0' && box8 ==='0' && box9==='0') || (box1 ==='0' && box4 ==='0' && box7==='0')|| (box2==='0' && box5 ==='0' && box8 ==='0') || (box3 ==='0'&& box6 ==='0'&& box9==='0' ) ||( box1==='0' && box5==='0' && box9==='0') || (box3 ==='0'&& box5==='0' && box7==='0') ) {
+            display.innerText ='player 2 won'
+            gameover()
+
+
+            
+        }      
+
+}
+function gameover()
+{
+    document.querySelector('#a1').innerText =''
+    document.querySelector('#a2').innerText=''
+    document.querySelector('#a3').innerText=''
+     document.querySelector('#b1').innerText=''
+    document.querySelector('#b2').innerText=''
+    document.querySelector('#b3').innerText=''
+    document.querySelector('#c1').innerText=''
+     document.querySelector('#c2').innerText=''
+    document.querySelector('#c3').innerText=''
+}
+
         
-           
-    
-                    
-                   
-        
-        
-    </script>
+
+</script>
 </body>
 
 </html>
