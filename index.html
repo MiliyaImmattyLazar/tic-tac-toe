@@ -13,6 +13,7 @@
         <h1>TIC TAC TOE</h1>   
         <h2 class="winnerdisplay"></h2>
         <input id="player" type="text"> 
+        <button id="button">Restart</button>
     </header>
     <footer>
        
@@ -35,8 +36,12 @@
     var player =document.querySelector('#player')
     var container = document.querySelector('.container')
     var display = document.querySelector('.winnerdisplay')
+    var button =document.querySelector('#button')
 
-    
+    button.addEventListener('click',(gameover))
+    {
+       
+    }
    
     var clickNumber = 1
     var displayX = 'X'
@@ -78,12 +83,12 @@ function winner()
 
     if((box1 === 'X'&& box2 ==='X' && box3==='X')|| (box4 ==='X' &&box5==='X' &&box6 ==='X')|| (box7 ==='X' && box8 ==='X' && box9==='X') || (box1 ==='X' && box4 ==='X' && box7==='X')|| (box2==='X' && box5 ==='X' && box8 ==='X') || (box3 ==='X'&& box6 ==='X'&& box9==='X' ) ||( box1==='X' && box5==='X' && box9==='X') || (box3 ==='X'&& box5==='X' && box7==='X')) {
         display.innerText ='player 1 won'
-        gameover()
+        
         
         }
         else if((box1 === '0'&& box2 ==='0' && box3==='0')|| (box4 ==='0' &&box5==='0' &&box6 ==='0')|| (box7 ==='0' && box8 ==='0' && box9==='0') || (box1 ==='0' && box4 ==='0' && box7==='0')|| (box2==='0' && box5 ==='0' && box8 ==='0') || (box3 ==='0'&& box6 ==='0'&& box9==='0' ) ||( box1==='0' && box5==='0' && box9==='0') || (box3 ==='0'&& box5==='0' && box7==='0') ) {
             display.innerText ='player 2 won'
-            gameover()
+            
             
         }      
 
@@ -111,9 +116,7 @@ function checkDraw() {
 
           }
           
-}
-        
-
+}      
 </script>
 </body>
 

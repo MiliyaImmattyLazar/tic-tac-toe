@@ -18,6 +18,7 @@ https://miliyaimmattylazar.github.io/tic-tac-toe/
 - If any one of the winning condition is correct , then I have to check which user was it.
 - Then player won message should be displayed
 - Game over message will be printed if no winning combinations found in the grid.
+- A restart button is added to reset the game
 
 ## :rocket:Cool tech
 - Programming languages
@@ -26,10 +27,10 @@ https://miliyaimmattylazar.github.io/tic-tac-toe/
 - HTML
 
 ## :scream:Bugs to fix :poop:
-- value changes if i click again inside the box
+- 
 
 ## :sob: Lessons learnt
 - I will add more css styling like animations to my game if i had time.
 ## :white_check_mark:Future features
-- I would add a restart button to the game
+- Add more css styling elements to improve the game layout
 - Will add a Text decoration to the winning pair
