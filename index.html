@@ -52,15 +52,16 @@
     if(clickNumber % 2 === 0) {
         boxValue.value= displayX
         boxValue.textContent = displayX
-        player.value="Player2's turn"
+        display.innerText="Player2's turn"
         
         } 
         else if (clickNumber % 2 ===1){
             boxValue.value=display0
             boxValue.textContent = display0
-           player.value="Player1's turn"
+           display.innerText="Player1's turn"
         }  
     winner()
+    checkDraw()
              
 })   
 function winner()
@@ -83,8 +84,6 @@ function winner()
         else if((box1 === '0'&& box2 ==='0' && box3==='0')|| (box4 ==='0' &&box5==='0' &&box6 ==='0')|| (box7 ==='0' && box8 ==='0' && box9==='0') || (box1 ==='0' && box4 ==='0' && box7==='0')|| (box2==='0' && box5 ==='0' && box8 ==='0') || (box3 ==='0'&& box6 ==='0'&& box9==='0' ) ||( box1==='0' && box5==='0' && box9==='0') || (box3 ==='0'&& box5==='0' && box7==='0') ) {
             display.innerText ='player 2 won'
             gameover()
-
-
             
         }      
 
@@ -101,7 +100,18 @@ function gameover()
      document.querySelector('#c2').innerText=''
     document.querySelector('#c3').innerText=''
 }
+function checkDraw() {
+    if((display.innerText !== 'player 1 won')||(display.innerText !=='player 2 won') ){
+        if((document.querySelector('#a1').innerText !=='') && (document.querySelector('#a2').innerText !=='')&& (document.querySelector('#a3').innerText !=='') &&(document.querySelector('#b1').innerText !=='') && (document.querySelector('#b2').innerText !=='')&& ( document.querySelector('#b3').innerText!=='')&& ( document.querySelector('#c1').innerText !=='') && (document.querySelector('#c2').innerText !=='') &&(document.querySelector('#c3').innerText !=='')) {
+            display.innerText ="It's a draw"
+            gameover()
 
+        }
+          
+
+          }
+          
+}
         
 
 </script>
