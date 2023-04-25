@@ -27,7 +27,7 @@ https://miliyaimmattylazar.github.io/tic-tac-toe/
 - HTML
 
 ## :scream:Bugs to fix :poop:
-- 
+- couldn't apply restart option to checkdraw function
 
 ## :sob: Lessons learnt
 - I will add more css styling like animations to my game if i had time.
